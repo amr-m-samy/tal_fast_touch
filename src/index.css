@@ -66,20 +66,35 @@
 
 @media only screen and (max-width: 1400px) {
   html {
-    font-size: 50% !important;
+    font-size: 55% !important;
+  }
+  /*   #quiz { */
+  /*     max-width: 110rem; */
+  /*     width: 75vw !important; */
+  /*     height: 50vw !important; */
+  /*   } */
+}
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 45% !important;
   }
 }
 @media only screen and (max-width: 1100px) {
   html {
     font-size: 40% !important;
   }
+  /* #quiz { */
+  /*   max-width: 110rem; */
+  /*   width: 75vw !important; */
+  /*   height: 50vw !important; */
+  /* } */
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   html {
     font-size: 35% !important;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
   html {
     font-size: 30% !important;
   }
@@ -188,11 +203,12 @@ button {
 }
 
 #quiz {
-  max-width: 140rem;
-  width: 60vw;
-  height: 42vw;
+  max-width: 120rem;
+  width: 120rem;
+  height: 60rem;
   margin: auto;
   padding: 1rem;
+  /* background: linear-gradient(180deg, #008080f5 0%, #ffdab9e8 100%); */
   background: linear-gradient(180deg, #35688ec4 0%, #9f97c5d9 100%);
   /* background: linear-gradient(180deg, #3e2a60 0%, #321061 100%); */
   border-radius: 8px;
@@ -203,7 +219,7 @@ button {
 #question {
   display: grid;
   grid-template-columns: 1fr 0.75fr 0.75fr 1fr;
-  grid-template-rows: 12vw 12vw 12vw;
+  grid-template-rows: 17rem 17rem 17rem;
   gap: 1rem 1rem;
   grid-auto-flow: row;
   grid-template-areas:
@@ -226,25 +242,46 @@ button {
   text-transform: uppercase;
 }
 
-#question-time {
-  width: 50%;
-  height: 1rem;
-  border-radius: 24px;
-  background: #9e5ef8;
+progress {
+  width: 65rem;
+  height: 4rem;
+  scale: 0.6;
+  /* border-radius: 24px; */
+  /* background: #9e5ef8; */
+  /* background-image: url(./assets/WenrexaUIMobile/SliderBar_ProgressBar.png); */
   margin: auto;
   display: flex;
+  background: url("./assets/WenrexaUIMobile/SliderBar_ProgressBare.png")
+    no-repeat;
+  -webkit-appearance: none;
+
+  background-size: 65rem 4rem;
+  appearance: none;
+  outline: none;
+  border: none;
+  /* background: url("./assets/WenrexaUIMobile/SliderBar_ProgressBar.png") */
+  /*   no-repeat; */
   /* position: absolute; */
   /* top: 3rem; */
 }
-
-#question-time::-webkit-progress-bar {
-  background: #6a558a;
-  border-radius: 24px;
+progress::-moz-progress-bar {
+  background-color: rgba(255, 165, 0, 0.8); /* Your desired background color */
+  background: url("./assets/WenrexaUIMobile/Progress04e.png") no-repeat;
+  background-size: 65rem 4rem;
 }
 
-#question-time::-webkit-progress-value {
-  background: #9e5ef8;
-  border-radius: 24px;
+progress::-webkit-progress-bar {
+  background: url("./assets/WenrexaUIMobile/SliderBar_ProgressBare.png")
+    no-repeat;
+
+  background-size: 65rem 4rem;
+  /* background-size: cover;  */
+}
+
+progress::-webkit-progress-value {
+  background: url("./assets/WenrexaUIMobile/Progress04e.png") no-repeat;
+  /* background: #9e5; */
+  /* background-size: cover; */
 }
 
 #question-time.answered {
@@ -263,17 +300,33 @@ button {
   /* font-family: "Roboto", sans-serif; */
   width: 100%;
   height: 100%;
-  font-size: 6rem;
+  font-size: 8rem;
   /* font-weight: 600; */
-  color: #fff;
-  background-image: url("./assets/BasicGUI/question_port_2.png");
+  /* color: #373a40; */
+  color: #454545;
+  /* color: #fff; */
+  background-image: url("./assets/WenrexaUIMobile/Btn05.png");
   background-repeat: no-repeat;
-  background-size: 22rem 15rem;
+  background-size: 24rem 17rem;
   background-position: 50% 50%;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-shadow:
+    rgb(249, 192, 154) 2px 0px 0px,
+    rgb(249, 192, 154) 1.75517px 0.958851px 0px,
+    rgb(249, 192, 154) 1.0806px 1.68294px 0px,
+    rgb(249, 192, 154) 0.141474px 1.99499px 0px,
+    rgb(249, 192, 154) -0.832294px 1.81859px 0px,
+    rgb(249, 192, 154) -1.60229px 1.19694px 0px,
+    rgb(249, 192, 154) -1.97999px 0.28224px 0px,
+    rgb(249, 192, 154) -1.87291px -0.701566px 0px,
+    rgb(249, 192, 154) -1.30729px -1.51361px 0px,
+    rgb(249, 192, 154) -0.421592px -1.95506px 0px,
+    rgb(249, 192, 154) 0.567324px -1.91785px 0px,
+    rgb(249, 192, 154) 1.41734px -1.41108px 0px,
+    rgb(249, 192, 154) 1.92034px -0.558831px 0px;
 }
 
 .question-area {
@@ -335,20 +388,20 @@ button {
 
 .answer-btn {
   display: inline-block;
-  width: 13rem;
-  height: 13rem;
+  width: 15rem;
+  height: 14.5rem;
   /* font-family: "Roboto Condensed", sans-serif; */
 
   font-family: "BigSpace", sans-serif;
 
-  font-size: 5rem;
+  font-size: 6rem;
   border: none;
   font-weight: 500;
   color: #fff;
   cursor: pointer;
   text-shadow: var(--font-text_shadow);
   /* transition: all 0.2s ease-in-out; */
-  background-image: url("./assets/BasicGUI/answer_port_stone.png");
+  background-image: url("./assets/WenrexaUIMobile/Btn03.png");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -368,10 +421,11 @@ button {
 }
 
 .answer-btn:active {
-  color: orange;
+  color: peru;
   /* filter: sepia(100%); */
+  filter: contrast(130%);
   /* filter: hue-rotate(180deg); */
-  filter: saturate(3);
+  /* filter: saturate(2); */
 }
 
 .answer button.selected {
@@ -543,35 +597,61 @@ button {
   background: rgba(0, 0, 0, 0.6);
 }
 
+/* .modal { */
+/*   /* min-width: 30rem; */
+/*   padding: 0; */
+/*   z-index: 2; */
+/*   background-image: url("./assets/BasicGUI/Banner_Grey.png"), */
+/*     url("./assets/BasicGUI/Box_Blue_Rounded.png"); */
+/**/
+/*   background-size: */
+/*     calc(var(--modal-size) * 15rem) calc(var(--modal-size) * 7rem), */
+/*     calc(var(--modal-size) * 25rem) calc(var(--modal-size) * 25rem); */
+/*   background-color: transparent; */
+/*   background-repeat: no-repeat; */
+/*   background-position: */
+/*     left calc(var(--modal-size) * 7.6rem) top 0, */
+/*     left calc(var(--modal-size) * 2.7rem) top calc(var(--modal-size) * 4rem); */
+/*   width: calc(var(--modal-size) * 30rem); */
+/*   height: calc(var(--modal-size) * 30rem); */
+/*   border: none; */
+/*   animation: slide-down-fade-in 0.3s ease-out forwards; */
+/*   outline: none; */
+/* } */
+/* .modal .modal-content { */
+/*   margin-top: 4rem; */
+/* } */
+/* .modal .modal_title { */
+/*   text-align: center; */
+/*   color: white; */
+/*   font-size: 4.5rem; */
+/*   text-shadow: var(--font-text_shadow); */
+/* } */
+
 .modal {
   /* min-width: 30rem; */
   padding: 0;
   z-index: 2;
-  background-image: url("./assets/BasicGUI/Banner_Grey.png"),
-    url("./assets/BasicGUI/Box_Blue_Rounded.png");
-
-  background-size:
-    calc(var(--modal-size) * 15rem) calc(var(--modal-size) * 7rem),
-    calc(var(--modal-size) * 25rem) calc(var(--modal-size) * 25rem);
+  background-image: url("./assets/WenrexaUIMobile/Msg02trans.png");
+  /* background-size: calc(var(--modal-size) * 25rem) */
+  /*   calc(var(--modal-size) * 25rem); */
+  background-size: cover;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position:
-    left calc(var(--modal-size) * 7.6rem) top 0,
-    left calc(var(--modal-size) * 2.7rem) top calc(var(--modal-size) * 4rem);
-  width: calc(var(--modal-size) * 30rem);
-  height: calc(var(--modal-size) * 30rem);
+  width: calc(var(--modal-size) * 31.8rem);
+  height: calc(var(--modal-size) * 29.1rem);
   border: none;
   animation: slide-down-fade-in 0.3s ease-out forwards;
   outline: none;
 }
 .modal .modal-content {
-  margin-top: 4rem;
 }
 .modal .modal_title {
   text-align: center;
   color: white;
   font-size: 4.5rem;
   text-shadow: var(--font-text_shadow);
+  padding-top: 1rem;
 }
 .setting-option-title {
   color: white;
@@ -618,15 +698,17 @@ hr {
 .radio-input {
   scale: 2;
   position: absolute;
-  top: 0.3rem;
-  right: 0.3rem;
+  top: 0.7rem;
+  left: 7.7rem;
   opacity: 0;
+  width: 60%;
+  height: 2rem;
+  cursor: pointer;
 }
 
 .radio-label {
   width: 60%;
-  font-size: 3rem;
-  cursor: pointer;
+  font-size: 2.5rem;
   margin: 0 10px;
   position: relative;
   display: flex;
@@ -646,10 +728,10 @@ hr {
 
 /* Specific styles for each radio button image */
 .option-image {
-  background-image: url("./assets/BasicGUI/ScrollBar_Button.png"); /* Path to your image */
+  background-image: url("./assets/WenrexaUIMobile/CheckBox06.png"); /* Path to your image */
 }
 .option-image.checked {
-  background-image: url("./assets/BasicGUI/ScrollBar_Orange_Button.png"); /* Path to your checked image */
+  background-image: url("./assets/WenrexaUIMobile/CheckBox04.png"); /* Path to your checked image */
 }
 .btn {
   font-family: "BigSpace", sans-serif;
@@ -660,29 +742,47 @@ hr {
   background-size: cover;
   color: white;
 }
+/* .home-btn { */
+/*   position: absolute; */
+/*   top: 2rem; */
+/*   left: 2rem; */
+/*   background-image: url("./assets/BasicGUI/Icon_Small_Blank_Home.png"), */
+/*     url("./assets/BasicGUI/IconButton_Large_Blue_Circle.png"); */
+/*   background-size: 5rem; */
+/*   background-repeat: no-repeat; */
+/*   background-size: */
+/*     5rem 5rem, */
+/*     10rem 10rem; */
+/*   background-position: center; */
+/*   width: 10rem; */
+/*   height: 10rem; */
+/* } */
 .home-btn {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
-  background-image: url("./assets/BasicGUI/Icon_Small_Blank_Home.png"),
-    url("./assets/BasicGUI/IconButton_Large_Blue_Circle.png");
-  background-size: 5rem;
-  background-repeat: no-repeat;
-  background-size:
-    5rem 5rem,
-    10rem 10rem;
-  background-position: center;
-  width: 10rem;
-  height: 10rem;
+  top: 7rem;
+  left: 7rem;
+  background-image: url("./assets/WenrexaUIMobile/Icon02.png");
+  background-size: cover;
+  width: 10.4rem;
+  height: 9rem;
 }
+/* .play-icon { */
+/*   background-image: url("./assets/BasicGUI/ButtonText_Large_GreyOutline_Round.png"); */
+/*   width: 23rem; */
+/*   height: 7rem; */
+/*   transform: translateY(4rem); */
+/* } */
+
 .play-icon {
-  background-image: url("./assets/BasicGUI/ButtonText_Large_GreyOutline_Round.png");
-  width: 23rem;
-  height: 7rem;
-  transform: translateY(4rem);
+  background-image: url("./assets/WenrexaUIMobile/Button24e.png");
+  width: 18rem;
+  height: 7.1rem;
+  margin-top: 1.5rem;
+  font-size: 3rem;
+  /* transform: translateY(4rem); */
 }
 .play-icon:hover {
-  filter: saturate(7) !important;
+  /* filter: saturate(7) !important; */
 }
 .start-btn-wrapper {
   width: 100%;
@@ -692,14 +792,24 @@ hr {
   align-items: center;
 }
 
+/* .close-btn { */
+/*   background-image: url("./assets/BasicGUI/PremadeButtons_XRed.png"); */
+/*   background-size: cover; */
+/*   width: 5rem; */
+/*   height: 4.3rem; */
+/*   position: absolute; */
+/*   right: 6rem; */
+/*   top: 7.6rem; */
+/* } */
+
 .close-btn {
-  background-image: url("./assets/BasicGUI/PremadeButtons_XRed.png");
+  background-image: url("./assets/WenrexaUIMobile/Icon78.png");
   background-size: cover;
   width: 5rem;
-  height: 5rem;
+  height: 4.3rem;
   position: absolute;
-  right: 6rem;
-  top: 7.6rem;
+  right: 9rem;
+  top: 5.6rem;
 }
 
 .play-btn-wrapper {
@@ -707,14 +817,48 @@ hr {
   display: flex;
   justify-content: center;
 }
+/* .start-icon { */
+/*   background-image: url("./assets/BasicGUI/ButtonText_Small_Blue_Round.png"); */
+/*   width: 22rem; */
+/*   height: 10rem; */
+/* } */
 .start-icon {
-  background-image: url("./assets/BasicGUI/ButtonText_Small_Blue_Round.png");
-  width: 22rem;
-  height: 10rem;
+  background-image: url("./assets/WenrexaUIMobile/Icon37.png");
+  background-size: cover;
+  width: 18rem;
+  height: 15.6rem;
 }
 button:hover {
   filter: grayscale(50%);
 }
 button:active {
   filter: grayscale(80%);
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 30rem;
+  font-weight: bold;
+}
+
+.count {
+  animation: fadeInOut 1s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
 }

@@ -5,11 +5,8 @@ import { getRandomNumberInRange } from "../../Helper/helper.js"
 import { GameContext } from "../../store/game-context.jsx"
 
 export default function Quiz({ settings }) {
-
   const { userAnswers } = useContext(GameContext)
-
   const nextQuestion = userAnswers.length
-
 
   function questionSpeed() {
     if (settings.speed === 'easy') return 8;
@@ -27,7 +24,10 @@ export default function Quiz({ settings }) {
     while ((userAnswers.length && userAnswers[userAnswers.length - 1].question === question)) // to prevent 2 same question in a row
     return question
   }
-  if (nextQuestion === 10) return <Summary />
+  if (nextQuestion === 10) {
+
+    return <Summary />
+  }
   return (
 
     <div className="main-wrapper">

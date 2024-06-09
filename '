@@ -1,0 +1,813 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+:root {
+  --white: #ffffff;
+  --modal-size: 1;
+  --font-text_shadow: rgb(21, 67, 88) 3px 0px 0px,
+    rgb(21, 67, 88) 2.83487px 0.981584px 0px,
+    rgb(21, 67, 88) 2.35766px 1.85511px 0px,
+    rgb(21, 67, 88) 1.62091px 2.52441px 0px,
+    rgb(21, 67, 88) 0.705713px 2.91581px 0px,
+    rgb(21, 67, 88) -0.287171px 2.98622px 0px,
+    rgb(21, 67, 88) -1.24844px 2.72789px 0px,
+    rgb(21, 67, 88) -2.07227px 2.16926px 0px,
+    rgb(21, 67, 88) -2.66798px 1.37182px 0px,
+    rgb(21, 67, 88) -2.96998px 0.42336px 0px,
+    rgb(21, 67, 88) -2.94502px -0.571704px 0px,
+    rgb(21, 67, 88) -2.59586px -1.50383px 0px,
+    rgb(21, 67, 88) -1.96093px -2.27041px 0px,
+    rgb(21, 67, 88) -1.11013px -2.78704px 0px,
+    rgb(21, 67, 88) -0.137119px -2.99686px 0px,
+    rgb(21, 67, 88) 0.850987px -2.87677px 0px,
+    rgb(21, 67, 88) 1.74541px -2.43999px 0px,
+    rgb(21, 67, 88) 2.44769px -1.73459px 0px,
+    rgb(21, 67, 88) 2.88051px -0.838247px 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "BigSpace";
+  src: url("./fonts/big-space-font/BigSpace-rPKx.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RapierZeroItalic";
+  src: url("./fonts/rapier-zero-font/RapierZeroItalic-DyK3.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "RapierZeroHollow";
+  src: url("./fonts/rapier-zero-font/RapierZeroHollow-xqdO.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RapierZeroHollowItalic";
+  src: url("./fonts/rapier-zero-font/RapierZeroHollowItalic-pLrD.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "RapierZero";
+  src: url("./fonts/rapier-zero-font/RapierZero-325M.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 1400px) {
+  html {
+    font-size: 50% !important;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 40% !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 35% !important;
+  }
+}
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 30% !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 25% !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 20% !important;
+  }
+}
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 15% !important;
+  }
+}
+
+html {
+  /* font-family: "Roboto", sans-serif; */
+
+  font-family: "BigSpace", sans-serif;
+  /* font-family: "Fredoka", sans-serif; */
+  font-weight: 500;
+  line-height: 1.5;
+
+  color: #ebe7ef;
+  font-size: 62.5%;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  /* min-height: 100rem; */
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  /* background: linear-gradient(180deg, #22182f 0%, #2c2437 100%); */
+  background-color: #1d0433;
+  background-image: url("./assets/BasicGUI/bg__1.jpg");
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%237616DD'/%3E%3Cstop offset='1' stop-color='%231D0433'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%2318E0FF' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%2318E0FF' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E"); */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  height: 100vh;
+}
+header {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+header img {
+  width: 3rem;
+  height: 3rem;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+}
+
+header h1 {
+  /* font-family: "Roboto Condensed", sans-serif; */
+  font-weight: bold;
+  font-size: 2.5rem;
+  letter-spacing: 0.6rem;
+  margin: 0;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #e781fb 40%, #8e76fa 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+
+#last-try {
+  max-width: 40rem;
+  margin: 2rem auto;
+  font-size: 0.8rem;
+  /* font-family: "Roboto Condensed", sans-serif; */
+  text-align: center;
+}
+
+#last-try h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: #9c7fd3;
+  text-transform: uppercase;
+}
+
+#last-try ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  font-size: 1.25rem;
+  color: #a690c5;
+}
+
+#quiz {
+  max-width: 140rem;
+  width: 60vw;
+  height: 42vw;
+  margin: auto;
+  padding: 1rem;
+  background: linear-gradient(180deg, #35688ec4 0%, #9f97c5d9 100%);
+  /* background: linear-gradient(180deg, #3e2a60 0%, #321061 100%); */
+  border-radius: 8px;
+  /* box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.6); */
+  box-shadow: 1px 1px 8px 4px rgba(12, 5, 32, 0.6);
+  /* text-align: center; */
+}
+#question {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr 0.75fr 1fr;
+  grid-template-rows: 12vw 12vw 12vw;
+  gap: 1rem 1rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "a1 a2 a3 a4"
+    "a5 question-area question-area a6"
+    "a7 a8 a9 a10";
+  margin-top: 2rem;
+}
+.main-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#question-overview {
+  /* font-family: "Roboto Condensed", sans-serif; */
+  font-size: 0.8rem;
+  color: #9082a3;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+progress {
+  width: 58%;
+  height: 4rem;
+  /* border-radius: 24px; */
+  /* background: #9e5ef8; */
+  /* background-image: url(./assets/WenrexaUIMobile/SliderBar_ProgressBar.png); */
+  margin: auto;
+  display: flex;
+  background: url("./assets/WenrexaUIMobile/SliderBar_ProgressBare.png")
+    no-repeat;
+  -webkit-appearance: none;
+
+  appearance: none;
+  outline: none;
+  border: none;
+  /* background: url("./assets/WenrexaUIMobile/SliderBar_ProgressBar.png") */
+  /*   no-repeat; */
+  /* position: absolute; */
+  /* top: 3rem; */
+}
+progress::-moz-progress-bar {
+  background-color: rgba(255, 165, 0, 0.8); /* Your desired background color */
+  background: url("./assets/WenrexaUIMobile/Progress04e.png") no-repeat;
+}
+
+progress::-webkit-progress-bar {
+  background: url("./assets/WenrexaUIMobile/SliderBar_ProgressBare.png")
+    no-repeat;
+  /* background-size: cover;  */
+}
+
+progress::-webkit-progress-value {
+  background: url("./assets/WenrexaUIMobile/Progress04e.png") no-repeat;
+  /* background: #9e5; */
+  /* background-size: cover; */
+}
+
+#question-time.answered {
+  background: #f8e59c;
+}
+
+#question-time.answered::-webkit-progress-value {
+  background: #f8e59c;
+}
+
+#question-time.answered::-webkit-progress-bar {
+  background: #6a558a;
+}
+
+#question h1 {
+  /* font-family: "Roboto", sans-serif; */
+  width: 100%;
+  height: 100%;
+  font-size: 8rem;
+  /* font-weight: 600; */
+  /* color: #373a40; */
+  color: #31363f;
+  background-image: url("./assets/WenrexaUIMobile/Btn03.png");
+  background-repeat: no-repeat;
+  background-size: 24rem 17rem;
+  background-position: 50% 50%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow:
+    rgb(249, 192, 154) 2px 0px 0px,
+    rgb(249, 192, 154) 1.75517px 0.958851px 0px,
+    rgb(249, 192, 154) 1.0806px 1.68294px 0px,
+    rgb(249, 192, 154) 0.141474px 1.99499px 0px,
+    rgb(249, 192, 154) -0.832294px 1.81859px 0px,
+    rgb(249, 192, 154) -1.60229px 1.19694px 0px,
+    rgb(249, 192, 154) -1.97999px 0.28224px 0px,
+    rgb(249, 192, 154) -1.87291px -0.701566px 0px,
+    rgb(249, 192, 154) -1.30729px -1.51361px 0px,
+    rgb(249, 192, 154) -0.421592px -1.95506px 0px,
+    rgb(249, 192, 154) 0.567324px -1.91785px 0px,
+    rgb(249, 192, 154) 1.41734px -1.41108px 0px,
+    rgb(249, 192, 154) 1.92034px -0.558831px 0px;
+}
+
+.question-area {
+  grid-area: question-area;
+}
+
+.a1 {
+  grid-area: a1;
+}
+
+.a2 {
+  grid-area: a2;
+}
+
+.a3 {
+  grid-area: a3;
+}
+
+.a4 {
+  grid-area: a4;
+}
+
+.a5 {
+  grid-area: a5;
+}
+
+.a6 {
+  grid-area: a6;
+}
+
+.a7 {
+  grid-area: a7;
+}
+
+.a8 {
+  grid-area: a8;
+}
+
+.a9 {
+  grid-area: a9;
+}
+
+.a10 {
+  grid-area: a10;
+}
+
+/* #answers { */
+/*   list-style: none; */
+/*   margin: 0; */
+/*   padding: 0; */
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   align-items: center; */
+/*   gap: 0.5rem; */
+/* } */
+
+.answer {
+}
+
+.answer-btn {
+  display: inline-block;
+  width: 14rem;
+  height: 13.5rem;
+  /* font-family: "Roboto Condensed", sans-serif; */
+
+  font-family: "BigSpace", sans-serif;
+
+  font-size: 5rem;
+  border: none;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: var(--font-text_shadow);
+  /* transition: all 0.2s ease-in-out; */
+  background-image: url("./assets/WenrexaUIMobile/Btn10.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.4s;
+}
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.answer-btn:active {
+  color: orange;
+  /* filter: sepia(100%); */
+  /* filter: hue-rotate(180deg); */
+  filter: saturate(3);
+}
+
+.answer button.selected {
+  /* background: linear-gradient(180deg, #fbda81 0%, #f8b173 100%); */
+  filter: saturate(8);
+}
+
+.answer button.correct {
+  /* background-image: url("./assets/BasicGUI/IconButton_Large_Green_Circle.png"); */
+}
+
+.answer button.wrong {
+  /* background-image: url("./assets/BasicGUI/IconButton_Large_Red_Circle.png"); */
+}
+
+#skip-action {
+  margin-top: 2rem;
+}
+
+#skip-action button {
+  /* font-family: "Roboto Condensed", sans-serif; */
+  font-size: 1rem;
+  border: none;
+  background: transparent;
+  color: #9082a3;
+  cursor: pointer;
+}
+
+#skip-action button:hover,
+#skip-action button:focus {
+  color: #c7bfd6;
+}
+
+#summary {
+  max-width: 90rem;
+  margin: 2rem auto;
+  padding: 5rem;
+  /* background: linear-gradient(180deg, #a17eda 0%, #895fc4 100%); */
+  background: linear-gradient(180deg, #a17edabf 0%, #895fc4 100%);
+  color: #191321;
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.6);
+  animation: slide-in-from-bottom 0.7s ease-out;
+}
+
+#summary img {
+  display: block;
+  width: 15rem;
+  height: 15rem;
+  object-fit: contain;
+  margin: 0 auto 1rem auto;
+  padding: 1rem;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+  border: 2px solid #3a2353;
+  border-radius: 50%;
+  background: #c18cfa;
+}
+
+#summary h2 {
+  /* font-family: "Roboto", sans-serif; */
+  font-size: 11rem;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  color: #3a2353;
+}
+
+#summary ol {
+  list-style: none;
+  margin: 4rem auto;
+  padding: 0;
+  text-align: center;
+}
+
+#summary li {
+  margin: 2rem 0;
+}
+
+#summary h3 {
+  /* font-family: "Roboto Condensed", sans-serif; */
+  font-size: 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2c203d;
+  color: #d8cde8;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+#summary .question {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+  color: #30273a;
+}
+
+#summary .user-answer {
+  margin: 0.25rem 0;
+  /* font-family: "Roboto Condensed", sans-serif; */
+  font-weight: bold;
+  color: #251e2f;
+}
+
+#summary .user-answer.correct {
+  color: #054e37;
+}
+
+#summary .user-answer.wrong {
+  color: #730b4b;
+}
+
+#summary .user-answer.skipped {
+  color: #d1baf2;
+  font-weight: normal;
+}
+
+#summary-stats {
+  display: flex;
+  gap: 4rem;
+  width: 80%;
+  /* margin: 2rem auto; */
+  margin-left: 9rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #594276;
+}
+
+#summary-stats p {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+#summary-stats .number {
+  /* font-family: "Roboto Condensed", sans-serif; */
+  font-size: 11rem;
+  color: #594276;
+}
+
+#summary-stats .text {
+  /* font-family: "Roboto Condensed", sans-serif; */
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: #30273a;
+  margin-top: -0.7rem;
+  margin-left: 0.2rem;
+  letter-spacing: 0.1rem;
+}
+
+@keyframes slide-in-from-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.modal::backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* .modal { */
+/*   /* min-width: 30rem; */
+/*   padding: 0; */
+/*   z-index: 2; */
+/*   background-image: url("./assets/BasicGUI/Banner_Grey.png"), */
+/*     url("./assets/BasicGUI/Box_Blue_Rounded.png"); */
+/**/
+/*   background-size: */
+/*     calc(var(--modal-size) * 15rem) calc(var(--modal-size) * 7rem), */
+/*     calc(var(--modal-size) * 25rem) calc(var(--modal-size) * 25rem); */
+/*   background-color: transparent; */
+/*   background-repeat: no-repeat; */
+/*   background-position: */
+/*     left calc(var(--modal-size) * 7.6rem) top 0, */
+/*     left calc(var(--modal-size) * 2.7rem) top calc(var(--modal-size) * 4rem); */
+/*   width: calc(var(--modal-size) * 30rem); */
+/*   height: calc(var(--modal-size) * 30rem); */
+/*   border: none; */
+/*   animation: slide-down-fade-in 0.3s ease-out forwards; */
+/*   outline: none; */
+/* } */
+/* .modal .modal-content { */
+/*   margin-top: 4rem; */
+/* } */
+/* .modal .modal_title { */
+/*   text-align: center; */
+/*   color: white; */
+/*   font-size: 4.5rem; */
+/*   text-shadow: var(--font-text_shadow); */
+/* } */
+
+.modal {
+  /* min-width: 30rem; */
+  padding: 0;
+  z-index: 2;
+  background-image: url("./assets/WenrexaUIMobile/Msg02trans.png");
+  /* background-size: calc(var(--modal-size) * 25rem) */
+  /*   calc(var(--modal-size) * 25rem); */
+  background-size: cover;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  width: calc(var(--modal-size) * 31.8rem);
+  height: calc(var(--modal-size) * 29.1rem);
+  border: none;
+  animation: slide-down-fade-in 0.3s ease-out forwards;
+  outline: none;
+}
+.modal .modal-content {
+}
+.modal .modal_title {
+  text-align: center;
+  color: white;
+  font-size: 4.5rem;
+  text-shadow: var(--font-text_shadow);
+  padding-top: 1rem;
+}
+.setting-option-title {
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-size: 3.5rem;
+  text-shadow: var(--font-text_shadow);
+}
+
+hr {
+  width: 50%;
+}
+
+@keyframes slide-down-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.radio-group {
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.radio-input {
+  scale: 2;
+  position: absolute;
+  top: 0.7rem;
+  left: 7.7rem;
+  opacity: 0;
+  width: 60%;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.radio-label {
+  width: 60%;
+  font-size: 2.5rem;
+  margin: 0 10px;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  color: lightgrey;
+  margin-bottom: 0.2rem;
+}
+
+/* Common styles for all radio button images */
+.radio-image {
+  display: block;
+  width: 3.1rem;
+  height: 3.1rem;
+  background-size: cover;
+}
+
+/* Specific styles for each radio button image */
+.option-image {
+  background-image: url("./assets/WenrexaUIMobile/CheckBox06.png"); /* Path to your image */
+}
+.option-image.checked {
+  background-image: url("./assets/WenrexaUIMobile/CheckBox04.png"); /* Path to your checked image */
+}
+.btn {
+  font-family: "BigSpace", sans-serif;
+  /* font-family: "Fredoka", sans-serif; */
+  font-size: 4rem;
+  /* font-weight: 600; */
+  cursor: pointer;
+  background-size: cover;
+  color: white;
+}
+/* .home-btn { */
+/*   position: absolute; */
+/*   top: 2rem; */
+/*   left: 2rem; */
+/*   background-image: url("./assets/BasicGUI/Icon_Small_Blank_Home.png"), */
+/*     url("./assets/BasicGUI/IconButton_Large_Blue_Circle.png"); */
+/*   background-size: 5rem; */
+/*   background-repeat: no-repeat; */
+/*   background-size: */
+/*     5rem 5rem, */
+/*     10rem 10rem; */
+/*   background-position: center; */
+/*   width: 10rem; */
+/*   height: 10rem; */
+/* } */
+.home-btn {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-image: url("./assets/WenrexaUIMobile/Icon02.png");
+  background-size: cover;
+  width: 10.4rem;
+  height: 9rem;
+}
+/* .play-icon { */
+/*   background-image: url("./assets/BasicGUI/ButtonText_Large_GreyOutline_Round.png"); */
+/*   width: 23rem; */
+/*   height: 7rem; */
+/*   transform: translateY(4rem); */
+/* } */
+
+.play-icon {
+  background-image: url("./assets/WenrexaUIMobile/Button24e.png");
+  width: 18rem;
+  height: 7.1rem;
+  margin-top: 1.5rem;
+  font-size: 3rem;
+  /* transform: translateY(4rem); */
+}
+.play-icon:hover {
+  /* filter: saturate(7) !important; */
+}
+.start-btn-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .close-btn { */
+/*   background-image: url("./assets/BasicGUI/PremadeButtons_XRed.png"); */
+/*   background-size: cover; */
+/*   width: 5rem; */
+/*   height: 4.3rem; */
+/*   position: absolute; */
+/*   right: 6rem; */
+/*   top: 7.6rem; */
+/* } */
+
+.close-btn {
+  background-image: url("./assets/WenrexaUIMobile/Icon78.png");
+  background-size: cover;
+  width: 5rem;
+  height: 4.3rem;
+  position: absolute;
+  right: 9rem;
+  top: 5.6rem;
+}
+
+.play-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* .start-icon { */
+/*   background-image: url("./assets/BasicGUI/ButtonText_Small_Blue_Round.png"); */
+/*   width: 22rem; */
+/*   height: 10rem; */
+/* } */
+.start-icon {
+  background-image: url("./assets/WenrexaUIMobile/Icon37.png");
+  background-size: cover;
+  width: 18rem;
+  height: 15.6rem;
+}
+button:hover {
+  filter: grayscale(50%);
+}
+button:active {
+  filter: grayscale(80%);
+}
