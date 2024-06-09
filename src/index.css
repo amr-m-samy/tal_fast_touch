@@ -280,6 +280,8 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value {
   background: url("./assets/WenrexaUIMobile/Progress04e.png") no-repeat;
+
+  background-size: 65rem 4rem;
   /* background: #9e5; */
   /* background-size: cover; */
 }
@@ -810,6 +812,7 @@ hr {
   position: absolute;
   right: 9rem;
   top: 5.6rem;
+  outline: none;
 }
 
 .play-btn-wrapper {
