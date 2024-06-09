@@ -108,6 +108,10 @@
   html {
     font-size: 20% !important;
   }
+  .close-btn {
+    width: 6rem !important;
+    height: 6rem !important;
+  }
 }
 @media only screen and (max-width: 400px) {
   html {
